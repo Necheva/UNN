@@ -1,0 +1,26 @@
+@import 'src/utils.scss';
+
+.container {
+  background-color: color(white);
+  border-radius: 2px;
+  box-shadow: 0 1px 2px 0 rgba(color(grey3), 0.5);
+}
+
+.title {
+  margin-left: auto;
+  margin-right: auto;
+  color: color(tuna);
+  text-align: center;
+
+  &.alignLeft {
+    text-align: unset;
+  }
+}
+
+.content {
+  display: flex;
+  flex: 1;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+}

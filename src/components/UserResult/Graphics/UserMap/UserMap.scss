@@ -1,0 +1,47 @@
+
+.container {
+    height: 100%;
+    display: grid;
+    background-color: #b99b39;
+    grid-template-columns: 488px;
+    grid-template-rows: 50px 400px 200px;
+    grid-template-areas:
+      'title'
+      'google-map'
+      'shops';
+    border-radius: 2px;
+  }
+
+  
+.title{
+    grid-area: title;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-top: 15px;
+    text-align: center;
+    align-items: center;
+}
+
+.google-map{
+    grid-area: google-map;
+    padding-top: 24px;
+    padding-left: 24px;
+    padding-right: 24px;
+    align-items: center;
+}
+
+.shops {
+    grid-area: shops;
+    padding-top: 24px;
+    padding-left: 24px;
+    padding-right: 24px;
+    align-items: center;
+}
+
+.card-title {
+    margin-right: auto;
+    color: #fff;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 400; 
+  }

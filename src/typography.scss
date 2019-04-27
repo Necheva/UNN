@@ -1,0 +1,221 @@
+@import 'src/utils.scss';
+
+@mixin no-margin {
+  margin: 0;
+}
+
+@mixin emphasized {
+  font-weight: 600;
+}
+
+@mixin medium {
+  font-weight: 500;
+}
+
+@mixin normal {
+  font-weight: 400;
+}
+
+@mixin light {
+  font-weight: 300;
+}
+
+@mixin no-wrap {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+@mixin body-1 {
+  @include normal;
+  font-size: px(13);
+  line-height: 1.54;
+}
+
+@mixin body-2 {
+  @include normal;
+  font-size: px(12);
+}
+
+@mixin caption-1 {
+  @include normal;
+  font-size: px(10);
+  line-height: px(14);
+}
+
+@mixin card-label {
+  @include light;
+  letter-spacing: px(0.12);
+  font-size: px(18);
+}
+
+@mixin card-title {
+  @include normal;
+  @include no-margin;
+  font-size: px(14);
+  letter-spacing: px(0.1);
+  opacity: 0.8;
+}
+
+@mixin tooltip-value {
+  @include light;
+  @include no-margin;
+  font-size: px(24);
+}
+
+h1 {
+  @include light;
+  font-size: px(42);
+  font-style: normal;
+  font-stretch: normal;
+  line-height: px(49);
+  letter-spacing: normal;
+  color: color(white);
+}
+
+h2 {
+  @include light;
+  font-style: normal;
+  font-stretch: normal;
+  font-size: px(32);
+  line-height: px(38);
+  letter-spacing: px(-0.8);
+  color: color(charcoal);
+}
+
+h3 {
+  @include light;
+  font-style: normal;
+  font-stretch: normal;
+  font-size: px(24);
+  line-height: px(28);
+  letter-spacing: px(-0.2);
+  color: color(black);
+}
+
+.subtitle-numbers {
+  @include light;
+  font-size: px(18);
+  font-style: normal;
+  font-stretch: normal;
+  line-height: px(21);
+  letter-spacing: normal;
+  color: color(oxfordBlue);
+}
+
+.subtitle-title {
+  @include light;
+  font-size: px(18);
+  font-style: normal;
+  font-stretch: normal;
+  line-height: px(21);
+  letter-spacing: px(0.1);
+  color: color(doveGray);
+}
+
+.subtitle-2-medium {
+  @include medium;
+  font-size: px(16);
+  font-style: normal;
+  font-stretch: normal;
+  line-height: px(19);
+  letter-spacing: normal;
+  color: color(black);
+}
+
+.subtitle-2 {
+  @include light;
+  font-size: px(16);
+  font-style: normal;
+  font-stretch: normal;
+  line-height: px(19);
+  letter-spacing: normal;
+  color: color(charcoal);
+}
+
+.subtitle-3 {
+  @include normal;
+  font-size: px(14);
+  font-style: normal;
+  font-stretch: normal;
+  line-height: px(16);
+  letter-spacing: normal;
+  color: color(charcoal);
+}
+
+.subtitle-3-light {
+  @include light;
+  font-size: px(14);
+  font-style: normal;
+  font-stretch: normal;
+  line-height: px(16);
+  letter-spacing: normal;
+  color: color(charcoal);
+}
+
+.body-medium-tab {
+  @include medium;
+  font-size: px(12);
+  font-style: normal;
+  font-stretch: normal;
+  line-height: px(14);
+  letter-spacing: normal;
+  color: color(black);
+}
+
+.body-regular-black {
+  @include body-2;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: px(14);
+  letter-spacing: normal;
+  color: color(black);
+}
+
+.body-regular {
+  @include body-2;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: px(14);
+  letter-spacing: normal;
+  color: color(charcoal);
+}
+
+.caption {
+  @include light;
+  font-size: px(10);
+  font-style: normal;
+  font-stretch: normal;
+  line-height: px(11);
+  letter-spacing: px(-0.1);
+  color: color(charcoal);
+}
+
+.caption-2 {
+  @include normal;
+  font-size: px(10);
+  font-style: normal;
+  font-stretch: normal;
+  line-height: px(11);
+  letter-spacing: px(-0.3);
+  color: color(charcoal);
+}
+
+.caption-3 {
+  @include normal;
+  font-size: px(9);
+  font-style: normal;
+  font-stretch: normal;
+  line-height: px(10);
+  letter-spacing: px(0.2);
+  color: color(charcoal);
+}
+
+.caption-4 {
+  @include light;
+  font-size: px(10);
+  font-style: normal;
+  font-stretch: normal;
+  line-height: px(11);
+  letter-spacing: px(0);
+  color: color(white);
+}

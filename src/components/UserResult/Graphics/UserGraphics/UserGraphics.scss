@@ -1,0 +1,61 @@
+
+.container {
+    height: 100%;
+    display: grid;
+    background-color: #2b5278;
+    grid-template-columns: 488px;
+    grid-template-rows: 50px 400px 200px;
+    grid-template-areas:
+      'title'
+      'graphics'
+      'report';
+    border-radius: 2px;
+  }
+
+.title{
+    grid-area: title;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-top: 15px;
+    text-align: center;
+    align-items: center;
+}
+
+.graphics{
+    grid-area: graphics;
+    padding-top: 54px;
+    align-items: center;
+}
+
+.report {
+    display: grid;
+    grid-area: report;
+    grid-template-columns: 300px 188px;
+    grid-template-rows: 200px;
+    grid-template-areas:
+        'data-before data-after';
+}
+
+.data-before {
+    grid-area: data-before;
+    padding-top: 55px;
+    font-size: 12px;
+    padding-left: 60px;
+    color: #fff;
+
+}
+
+.data-after{
+    grid-area: data-after;
+    padding-top: 55px;
+    font-size: 12px;
+    color: #fff;
+}
+
+.card-title {
+    margin-right: auto;
+    color: #fff;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 400; 
+  }

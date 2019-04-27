@@ -1,0 +1,60 @@
+
+.container {
+    height: 100%;
+    display: grid;
+    background-color: #2b5278;
+    grid-template-columns: 488px;
+    grid-template-rows: 50px 600px;
+    grid-template-areas:
+      'title'
+      'input';
+    border-radius: 2px;
+  }
+
+  .title {
+    grid-area: title;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-top: 15px;
+    text-align: center;
+    align-items: center;
+  }
+
+  .input{
+    display: grid;
+    grid-area: input;
+    grid-template-columns: 300px 188px;
+    grid-template-rows: 620px;
+    grid-template-areas:
+      'thing priority';
+    border-radius: 2px;
+  }
+
+  .thing {
+    grid-area: thing;
+    padding-left: 24px;
+    padding-top: 20px;
+    align-items: center;
+  }
+
+  .priority {
+    grid-area: priority;
+    padding-left: 18px;
+    padding-top: 20px;
+    padding-right: 24px;
+    align-items: center;
+  }
+
+  .card-title {
+    margin-right: auto;
+    color: #fff;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 400; 
+  }
+
+  .boxmargin {
+    margin-top: 15px;
+    margin-bottom: 20px;
+ }
+   

@@ -1,0 +1,76 @@
+@import 'src/colors.scss';
+
+@function color($colorName) {
+  @if (map_has_key($colors, $colorName)) {
+    @return map-get($colors, $colorName);
+  } @else {
+    @error "Color is not defined: " + $colorName;
+  }
+}
+
+@function gradient($gradientName) {
+  @if (map_has_key($gradients, $gradientName)) {
+    @return map-get($gradients, $gradientName);
+  } @else {
+    @error "Color is not defined: " + $gradientName;
+  }
+}
+
+$pxrem: 0.0625rem;
+
+@function px($size) {
+  @return $size * $pxrem;
+}
+
+$header-height: px(64);
+
+@mixin placeholder() {
+  &::-webkit-input-placeholder {
+    @content;
+  }
+
+  &:-moz-placeholder {
+    @content;
+  }
+
+  &::-moz-placeholder {
+    @content;
+  }
+
+  &:-ms-input-placeholder {
+    @content;
+  }
+}
+
+@mixin customScrollbar() {
+  &::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: px(5);
+    background-color: color(porcelain);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: px(10);
+    width: px(5);
+    background-color: color(mischka);
+  }
+
+  &::-webkit-scrollbar:horizontal {
+    -webkit-appearance: none;
+    height: px(5);
+    background-color: color(porcelain);
+  }
+
+  &::-webkit-scrollbar-thumb:horizontal {
+    border-radius: px(10);
+    height: px(5);
+    background-color: color(mischka);
+  }
+}
+
+@mixin icon($url, $size) {
+  background: url($url);
+  width: $size;
+  height: $size;
+  background-size: 100% 100%;
+}

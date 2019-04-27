@@ -1,0 +1,33 @@
+
+.container {
+    display: block;
+    margin-left: 30px;
+  
+    & > div:last-child {
+      margin-bottom: 40px;
+    }
+}
+
+.top {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: 488px 488px;
+  grid-template-rows: 650px;
+  grid-template-areas:
+    'user-data-output shop-map';
+  grid-gap: 16px;
+
+  .user-data-output {
+    grid-area: user-data-output;
+  }
+
+  .shop-map {
+    grid-area: shop-map; 
+  }
+
+}
+  
+.board-card {
+    border-radius: 2px;
+}
+  

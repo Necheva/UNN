@@ -1,0 +1,32 @@
+@import 'src/utils.scss';
+
+@mixin common($color, $hoverColor, $pressedColor, $disabledColor, $textColor: white) {
+  height: px(35);
+  flex: 1;
+  width: 100%;
+  background-color: $color;
+  color: $textColor;
+
+  border: none;
+  border-radius: px(3);
+
+  &:hover:not(.disabled) {
+    background-color: $hoverColor;
+  }
+
+  &:active:not(.disabled) {
+    background-color: $pressedColor;
+  }
+
+  &.disabled {
+    color: color(abbey);
+    background-color: $disabledColor;
+    pointer-events: none;
+    cursor: not-allowed;
+  }
+}
+
+.pelorous {
+  @include common(color(pelorous), darken(color(pelorous), 5%), darken(color(pelorous), 10%), color(iron));
+  font-size: px(14);
+}

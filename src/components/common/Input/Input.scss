@@ -1,0 +1,68 @@
+@import 'src/utils.scss';
+
+$inputTextColor: color(tuna);
+$inputDefaultBackgroundColor: color(athensGray2);
+$inputDisabledBackgroundColor: color(athensGray4);
+$inputTextPlaceholder: color(midGray1);
+$inputTextDisabledColor: color(bombay2);
+$inputActiveBorder: color(santasGray);
+$inputErrorStateBorder: color(red);
+$inputErrorStateBackground: color(wispPink);
+
+.container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.error-circle {
+  height: px(16);
+  width: px(16);
+  right: px(9);
+  position: absolute;
+  border-radius: 50%;
+  background-color: color(red);
+  color: color(white);
+  text-align: center;
+  font-family: 'Open Sans';
+  font-size: px(11);
+}
+
+.input {
+  height: px(34);
+  width: 100%;
+  background-color: $inputDefaultBackgroundColor;
+  color: $inputTextColor;
+  font-size: px(12);
+  border: 0;
+  padding-left: px(12);
+  padding-right: px(12);
+  padding-top: px(10);
+  padding-bottom: px(10);
+  text-align: left;
+
+  @include placeholder {
+    color: $inputTextPlaceholder;
+    font-size: px(12);
+    user-select: none;
+  }
+}
+
+.input:focus {
+  box-shadow: inset 0px 0px 0px px(1) $inputActiveBorder;
+  outline: none !important;
+}
+
+.input:disabled {
+  background-color: $inputDisabledBackgroundColor;
+  color: $inputTextDisabledColor;
+}
+
+.error-state,
+.error-state:focus {
+  &:not(:disabled) {
+    background-color: $inputErrorStateBackground;
+    box-shadow: inset 0px 0px 0px px(1) $inputErrorStateBorder;
+    outline: none !important;
+  }
+}

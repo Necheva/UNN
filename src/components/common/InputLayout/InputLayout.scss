@@ -1,0 +1,35 @@
+@import 'src/utils.scss';
+@import 'src/typography.scss';
+
+.title-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: px(7);
+
+  &.empty {
+    height: px(20);
+  }
+}
+
+.title {
+  color: #fff;
+  @include body-1;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.horizontal {
+  flex-direction: row;
+}
+
+.error-message {
+  @include caption-1;
+  @include emphasized;
+  color: color(red);
+  margin-top: px(7);
+}
